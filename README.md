@@ -1,4 +1,4 @@
-﻿# Cisco SD-WAN - LocalPolicy (REST API)
+# Cisco SD-WAN - LocalPolicy (REST API)
 The Cisco SD-WAN Solution (a.k.a Viptela) is a cloud-delivered overlay SD-WAN architecture that facilitates digital and cloud transformation for enterprises and communication service providers (CSP). It significantly reduces WAN costs and time to deploy new services.
 
 Cisco SD-WAN builds a API based architecture that's crucial for enterprises and CSPs to do the configuration automation through their internal tools.
@@ -30,3 +30,10 @@ This POSTMAN environment and collection that can be used to interact with the Ci
 * In order to execute the fifth API under "DeviceTemplate\5.To Create Local Policy\To Create Local Policy", replace value for below parameter in the request body 
   * definitionId : templateId fetched from the fourth API
 * We have successfully created a Local Policy.
+
+| Local Policy Components | Cardinality for one instance of Local policy | Lists that can be used | Important Aspects |
+| ----------------------- | -------------------------------------------- | ---------------------- | ----------------- |
+| QoS Map | 0..many | Class Map (Queue) |     |
+| Rewrite Rule | 0..many | Class Map (Class)      |      | 
+| ACL | 0..many | <p>Class Map (Match/Actions: Class)<br>DataPrefix (Match: Source/Destination IP Prefix)<br>Policer (Actions: Policer)<br>Mirror (Actions: Mirror)</p> | <ul><li>Variables are enabled only for the fields, Source IP Prefix and Destination IP Prefix</li><li>Single ACL Policy can have 0..many ACL Sequence</li><li>Single ACL Sequence can have 1..many Sequence Rules</li></ul> |
+| Route Policy | 0..many | <p>AS Path (Match: AS Path)<br>Community (Match: Community)<br>Extended Community (Match: Extended Community)<br>Prefix (Match: Address)</p> | <ul><li>Single Route Policy can have 0..many Sequence Types</li><li>Single Sequence Type can have 1..many Sequence Rules</li></ul> |	
