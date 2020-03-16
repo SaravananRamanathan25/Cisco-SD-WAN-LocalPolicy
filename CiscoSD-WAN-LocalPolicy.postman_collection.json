@@ -1,0 +1,317 @@
+{
+	"variables": [],
+	"info": {
+		"name": "CiscoSD-WAN-LocalPolicy",
+		"_postman_id": "9b4afbd7-603b-4897-db8f-8fc8cd353290",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "LocalPolicy",
+			"description": "",
+			"item": [
+				{
+					"name": "1.To Create List",
+					"description": "",
+					"item": [
+						{
+							"name": "To Create Class Map List",
+							"request": {
+								"url": "https://{{vmanage}}:{{port}}/dataservice/template/policy/list/class",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json, text/plain, */*",
+										"description": ""
+									},
+									{
+										"key": "Origin",
+										"value": "https://vmanage-259910.viptela.net",
+										"description": ""
+									},
+									{
+										"key": "User-Agent",
+										"value": "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									},
+									{
+										"key": "Referer",
+										"value": "https://vmanage-259910.viptela.net/index.html",
+										"description": ""
+									},
+									{
+										"key": "Accept-Encoding",
+										"value": "gzip, deflate, br",
+										"description": ""
+									},
+									{
+										"key": "Accept-Language",
+										"value": "en-US,en;q=0.9",
+										"description": ""
+									},
+									{
+										"key": "Cookie",
+										"value": "JSESSIONID=RdPjg0wax-S_Yi1l95aGVTnjP8bXB2fmU1XFxwgz.82375262-a826-4211-83e4-3eac4b294e1d",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"TestList-ClassMap\",\n\t\"description\": \"TestList-ClassMap\",\n\t\"type\": \"class\",\n\t\"entries\": [{\n\t\t\"queue\": \"7\"\n\t}]\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "2.To Get List Reference",
+					"description": "",
+					"item": [
+						{
+							"name": "To Get Class Map List",
+							"request": {
+								"url": "https://{{vmanage}}:{{port}}/dataservice/template/policy/list/class",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json, text/plain, */*",
+										"description": ""
+									},
+									{
+										"key": "User-Agent",
+										"value": "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									},
+									{
+										"key": "Referer",
+										"value": "https://vmanage-259910.viptela.net/index.html",
+										"description": ""
+									},
+									{
+										"key": "Accept-Encoding",
+										"value": "gzip, deflate, br",
+										"description": ""
+									},
+									{
+										"key": "Accept-Language",
+										"value": "en-US,en;q=0.9",
+										"description": ""
+									},
+									{
+										"key": "Cookie",
+										"value": "JSESSIONID=9A8Pdcl9im-5eegpsuorGMnKCM3Da1bjNeBrocm5.82375262-a826-4211-83e4-3eac4b294e1d; JSESSIONID=9A8Pdcl9im-5eegpsuorGMnKCM3Da1bjNeBrocm5.82375262-a826-4211-83e4-3eac4b294e1d",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "3.To Create Policy Component",
+					"description": "",
+					"item": [
+						{
+							"name": "To Create QoS Map Policy Component",
+							"request": {
+								"url": "https://{{vmanage}}:{{port}}/dataservice/template/policy/definition/qosmap",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json, text/plain, */*",
+										"description": ""
+									},
+									{
+										"key": "Origin",
+										"value": "https://vmanage-259910.viptela.net",
+										"description": ""
+									},
+									{
+										"key": "User-Agent",
+										"value": "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									},
+									{
+										"key": "Referer",
+										"value": "https://vmanage-259910.viptela.net/index.html",
+										"description": ""
+									},
+									{
+										"key": "Accept-Encoding",
+										"value": "gzip, deflate, br",
+										"description": ""
+									},
+									{
+										"key": "Accept-Language",
+										"value": "en-US,en;q=0.9",
+										"description": ""
+									},
+									{
+										"key": "Cookie",
+										"value": "JSESSIONID=dXE44RnEZm_sDPem7JcZrFWgPyTpdMWVxcwcmXg5.82375262-a826-4211-83e4-3eac4b294e1d",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"TestPolicyComponent-QoSMap\",\n\t\"type\": \"qosMap\",\n\t\"description\": \"TestPolicyComponent-QoSMap\",\n\t\"definition\": {\n\t\t\"qosSchedulers\": [{\n\t\t\t\"queue\": \"0\",\n\t\t\t\"bandwidthPercent\": \"70\",\n\t\t\t\"bufferPercent\": \"64\",\n\t\t\t\"burst\": 15000,\n\t\t\t\"scheduling\": \"llq\",\n\t\t\t\"drops\": \"tail-drop\"\n\t\t},\n\t\t{\n\t\t\t\"queue\": \"7\",\n\t\t\t\"bandwidthPercent\": \"30\",\n\t\t\t\"bufferPercent\": \"36\",\n\t\t\t\"scheduling\": \"wrr\",\n\t\t\t\"drops\": \"tail-drop\"\n\t\t}]\n\t}\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "4.To Get Definition Id of Policy Component",
+					"description": "",
+					"item": [
+						{
+							"name": "To Get Definition Id of QoS Map Policy Component",
+							"request": {
+								"url": "https://{{vmanage}}:{{port}}/dataservice/template/policy/definition/qosmap",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json, text/plain, */*",
+										"description": ""
+									},
+									{
+										"key": "User-Agent",
+										"value": "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									},
+									{
+										"key": "Referer",
+										"value": "https://vmanage-259910.viptela.net/index.html",
+										"description": ""
+									},
+									{
+										"key": "Accept-Encoding",
+										"value": "gzip, deflate, br",
+										"description": ""
+									},
+									{
+										"key": "Accept-Language",
+										"value": "en-US,en;q=0.9",
+										"description": ""
+									},
+									{
+										"key": "Cookie",
+										"value": "JSESSIONID=9A8Pdcl9im-5eegpsuorGMnKCM3Da1bjNeBrocm5.82375262-a826-4211-83e4-3eac4b294e1d",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "5.To Create Local Policy",
+					"description": "",
+					"item": [
+						{
+							"name": "To Create Local Policy",
+							"request": {
+								"url": "https://{{vmanage}}:{{port}}/dataservice/template/policy/vedge/",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json, text/plain, */*",
+										"description": ""
+									},
+									{
+										"key": "Origin",
+										"value": "https://vmanage-259910.viptela.net",
+										"description": ""
+									},
+									{
+										"key": "User-Agent",
+										"value": "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									},
+									{
+										"key": "Referer",
+										"value": "https://vmanage-259910.viptela.net/index.html",
+										"description": ""
+									},
+									{
+										"key": "Accept-Encoding",
+										"value": "gzip, deflate, br",
+										"description": ""
+									},
+									{
+										"key": "Accept-Language",
+										"value": "en-US,en;q=0.9",
+										"description": ""
+									},
+									{
+										"key": "Cookie",
+										"value": "JSESSIONID=WAWYLr4d0MwQJTcMPPckmloBkI7IsLtkEOmV4CE0.82375262-a826-4211-83e4-3eac4b294e1d",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"policyDescription\": \"TestLocalPolicy\",\n\t\"policyType\": \"feature\",\n\t\"policyName\": \"TestLocalPolicy\",\n\t\"policyDefinition\": {\n\t\t\"assembly\": [{\n\t\t\t\"definitionId\": \"b92143cb-8089-4277-868b-d3c35ebf2f5d\",\n\t\t\t\"type\": \"qosMap\"\n\t\t}],\n\t\t\"settings\": {\n\t\t\t\"appVisibility\": true,\n\t\t\t\"flowVisibility\": true,\n\t\t\t\"logFrequency\": 333\n\t\t}\n\t},\n\t\"isPolicyActivated\": false\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		}
+	]
+}
