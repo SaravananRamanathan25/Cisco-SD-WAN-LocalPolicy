@@ -31,6 +31,7 @@ This POSTMAN environment and collection that can be used to interact with the Ci
   * definitionId : templateId fetched from the fourth API
 * We have successfully created a Local Policy.
 
+# Local Policy Components' Cardinality with Local Policy
 | Local Policy Components | Cardinality for one instance of Local policy | Lists that can be used | Important Aspects |
 | ----------------------- | -------------------------------------------- | ---------------------- | ----------------- |
 | QoS Map | 0..many | Class Map (Queue) |     |
