@@ -38,6 +38,7 @@ This POSTMAN environment and collection that can be used to interact with the Ci
 | ACL | 0..many | <p>Class Map (Match/Actions: Class)<br>DataPrefix (Match: Source/Destination IP Prefix)<br>Policer (Actions: Policer)<br>Mirror (Actions: Mirror)</p> | <ul><li>Variables are enabled only for the fields, Source IP Prefix and Destination IP Prefix</li><li>Single ACL Policy can have 0..many ACL Sequence</li><li>Single ACL Sequence can have 1..many Sequence Rules</li></ul> |
 | Route Policy | 0..many | <p>AS Path (Match: AS Path)<br>Community (Match: Community)<br>Extended Community (Match: Extended Community)<br>Prefix (Match: Address)</p> | <ul><li>Single Route Policy can have 0..many Sequence Types</li><li>Single Sequence Type can have 1..many Sequence Rules</li></ul> |	
 
+
 | Level | Analysis |
 | ----------------------- | -------------------------------------------- |
-| Route Policy | 0..many |
+| List (3rd level) | 1. Cannot be deleted if it is referenced in any 2nd level policy.<br> 2. Will not be auto deleted if the 2nd level parent policy is deleted. It has to be deleted manually.|
