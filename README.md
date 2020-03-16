@@ -42,3 +42,5 @@ This POSTMAN environment and collection that can be used to interact with the Ci
 | Level | Analysis |
 | ----------------------- | -------------------------------------------- |
 | List (3rd level) | 1. Cannot be deleted if it is referenced in any 2nd level policy.<br> 2. Will not be auto deleted if the 2nd level parent policy is deleted. It has to be deleted manually.|
+| Individual Local Policy Lists (2nd Level) | 1. Cannot be deleted if it is referenced in any 1st  level policy. <br>2. Will not be auto deleted if the1st level parent policy is deleted. It has to be deleted manually.
+| Higher Level Local Policies (1st Level) |1. Deletion of 1st level policy will not delete any 2nd level policies referred under it.<br>2. If we have created new 2nd Level policy while creating new 1st level policy and cancelling the 1st level policy without saving, then the 2nd level policy will also get deleted.<br>3. If we have created new list while creating new 1st level policy and cancelling the 1st level policy without saving,  then it will not delete the list automatically. It has to be deleted manually.
