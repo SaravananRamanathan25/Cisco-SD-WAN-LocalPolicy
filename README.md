@@ -17,11 +17,12 @@ This POSTMAN environment and collection that can be used to interact with the Ci
 # Steps to execute APIs in the Postman Collection
 * Clone or Download the JSON files "CiscoSD-WAN-LocalPolicy.postman_collection.json" and "Cisco-SD-WAN-Environment.postman_environment.json"  
 * Import above files to the POSTMAN  
-* In the POSTMAN, make sure you set the environment as "Cisco-SD-WAN-Environment" in the top right corner![SelectEnvDetails](https://github.com/SaravananRamanathan25/Cisco-SD-WAN-Feature-Templates/blob/master/Images/SelectEnvDetails-Postman.png)
-* Go to Environment options and edit the vmanage, j_username, j_password and port details as per your own vmanage environment![EditEnvDetails](https://github.com/SaravananRamanathan25/Cisco-SD-WAN-Feature-Templates/blob/master/Images/UpdateEnvDetails_Postman.png)
-* First execute the API under "LocalPolicy\1.To Create List\To Create Class Map List".
+* In the POSTMAN, make sure you set the environment as "Cisco-SD-WAN-Environment" in the top right corner![SelectEnvDetails](https://github.com/SaravananRamanathan25/Cisco-SD-WAN-LocalPolicy/blob/master/Images/SelectEnvDetails-Postman.png)
+* Go to Environment options and edit the vmanage, j_username, j_password and port details as per your own vmanage environment. User account should have write permission for the feature "Policy Configuration" Feature.![EditEnvDetails](https://github.com/SaravananRamanathan25/Cisco-SD-WAN-LocalPolicy/blob/master/Images/UpdateEnvDetails_Postman.png)
+* First execute the API under "Authentication\Authentication". This will make sure that you have logged into the vManage for that session.
+* Next execute the API under "LocalPolicy\1.To Create List\To Create Class Map List".
 * Next execute the API under "LocalPolicy\2.To Get List Reference\To Get Class Map List.
-  * In the response payload, search with the list name and find its corresponding queue value
+  * In the response payload, search with the list name and find its corresponding queue value as shown below ![Get_Class](https://github.com/SaravananRamanathan25/Cisco-SD-WAN-LocalPolicy/blob/master/Images/Get_Class.png)
 * Next execute the third API under "LocalPolicy\3.To Create Policy Component\To Create QoS Map Policy Component". If you wish, you can change value for below parameters in the request body 
   * bandwidthPercent
   * bufferPercent
