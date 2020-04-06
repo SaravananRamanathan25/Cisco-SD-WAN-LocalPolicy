@@ -20,7 +20,7 @@ This POSTMAN environment and collection that can be used to interact with the Ci
 * In the POSTMAN, make sure you set the environment as "Cisco-SD-WAN-Environment" in the top right corner![SelectEnvDetails](https://github.com/SaravananRamanathan25/Cisco-SD-WAN-LocalPolicy/blob/master/Images/SelectEnvDetails-Postman.png)
 * Go to Environment options and edit the vmanage, j_username, j_password and port details as per your own vmanage environment. **User account should have write permission for the feature "Policy Configuration" Feature.**![EditEnvDetails](https://github.com/SaravananRamanathan25/Cisco-SD-WAN-LocalPolicy/blob/master/Images/UpdateEnvDetails_Postman.png)
 * First execute the API under "Authentication\Authentication". This will make sure that you have logged into the vManage for that session.
-* Next execute the API under "LocalPolicy\1.To Create List\To Create Class Map List".
+* Next execute the API under "LocalPolicy\1.To Create List\To Create Class Map List". If you wish, you can change the queue value. valid range is 1-7
 * Next execute the API under "LocalPolicy\2.To Get List Reference\To Get Class Map List.
   * In the response payload, search with the list name and find its corresponding queue value as shown below ![Get_Class](https://github.com/SaravananRamanathan25/Cisco-SD-WAN-LocalPolicy/blob/master/Images/Get_Class.png)
 * In order to execute the third API under "LocalPolicy\3.To Create Policy Component\To Create QoS Map Policy Component", replace below parameter in the request body.
@@ -30,7 +30,7 @@ This POSTMAN environment and collection that can be used to interact with the Ci
     * bufferPercent
   * After replacing above values, payload will somewhat look like as, ![Sample_PolicyComponent_Payload](https://github.com/SaravananRamanathan25/Cisco-SD-WAN-LocalPolicy/blob/master/Images/Sample_PolicyComponent_Payload.png)
 * Next execute the API under "LocalPolicy\4.To Get Definition Id of Policy Component\To Get Definition Id of QoS Map Policy Component".
-  * In the response payload, search with the Policy Component name and find its definitionId
+  * In the response payload, search with the Policy Component name and find its definitionId as shown below ![Get_QoSMap](https://github.com/SaravananRamanathan25/Cisco-SD-WAN-LocalPolicy/blob/master/Images/Get_QoSMap.png)
 * In order to execute the fifth API under "DeviceTemplate\5.To Create Local Policy\To Create Local Policy", replace value for below parameter in the request body 
   * PolicyComponent-definitionId : templateId fetched from the fourth API
   * After replacing above values, payload will somewhat look like as, ![Sample_Policy_Payload](https://github.com/SaravananRamanathan25/Cisco-SD-WAN-LocalPolicy/blob/master/Images/Sample_Policy_Payload.png)
